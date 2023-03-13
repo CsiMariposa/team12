@@ -1,0 +1,36 @@
+
+#tartalom{
+    position: relative;
+    width:760px;
+    height:300px;
+    margin-top:0px;
+    margin-left:5px;
+    margin-right:5px;
+    background-color:skyblue;
+    border-left:15px double rgb(9, 9, 10);
+  
+}
+
+.topleft {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 18px;
+    border: 3px solid #73AD21;
+  }
+  
+  img { 
+    width: 25%;
+    height: auto;
+    opacity: 0.8;
+   
+  }
+p{
+    text-align: left;
+    padding: 5px;
+  
+}
+h1  { 
+    font-size: 26px;
+    text-align: center;
+}
