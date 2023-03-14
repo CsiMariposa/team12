@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Számtani Mértani feladat </title>
+</head>
+
+<body>
+
+    <h1>Számtani/Mértani sorozat</h1>
+    <p>
+        Feladat leírása: Kérj be 3 számot és jelezd, hogy azok számtani vagy mértani sorozatot alkotnak-e?
+    </p>
+    <p> Számtani sorozat: 2,4,6 (különbség:2) vagy 3,6,9</p>
+    <p>Mértani sorozat: 2,4,8 (hányados:2) vagy 3,9,27</p>
+    <p> Add még kérlek az első számot:    </p> <br>
+    <input type="number" id="elsoSzam" value="1" min="1" max="100">
+    <p> Add még kérlek az második számot:    </p> <br>
+    <input type="number" id="masodikSzam" value="1" min="1" max="100">
+    <p> Add még kérlek az harmadik számot:    </p> <br>
+    <input type="number" id="harmadikSzam" value="1" min="1" max="100">
+    <input type="button" value="Elemzd" onclick="SzamtaniMertani()">
+
+    <script>
+        function SzamtaniMertani() {
+        let szamEgy = document.getElementById("elsoSzam").value;
+        let szamKetto = document.getElementById("masodikSzam").value;
+        let szamHarom = document.getElementById("harmadikSzam").value;
+
+        if ((szamKetto - szamEgy == szamHarom - szamKetto) && (szamKetto / szamEgy == szamHarom / szamKetto)) {
+            document.write(`${szamEgy},${szamKetto},${szamHarom} számok számtani és mértani sorozatot alkotnak`);
+        }
+        else if (szamKetto - szamEgy == szamHarom - szamKetto) {
+            document.write(`${szamEgy},${szamKetto},${szamHarom} számok számtani sorozatot alkotnak`);
+        }
+        else if (szamKetto / szamEgy == szamHarom / szamKetto) {
+            document.write(`${szamEgy},${szamKetto},${szamHarom} számok mértani sorozatot alkotnak`);
+        }
+        else {
+            document.write(`${szamEgy},${szamKetto},${szamHarom} számok NEM alkot számtani vagy mértani sorozatotk`);
+        }
+    }
+    </script>
+
+</body>
+
+</html>
