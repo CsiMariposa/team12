@@ -1,0 +1,1 @@
+//ezt csak azért hoztam létre hogy ne generáljon hibát az alapok kódom, haszna nincs több

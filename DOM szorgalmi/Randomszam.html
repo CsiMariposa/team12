@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Randomszámgenerálás-->
+    <p> <h1>Randomszám Generálás, mint alapművelet</h1></p>
+    <hr>
+  
+    <script>
+//Érték kiolvasása
+     
+        let randomSzam=Math.random();
+        document.write("Random szám genereálás: <br>" );
+        document.write(randomSzam);
+      
+        let randomSzam1=Math.round(Math.random());
+        document.write("<hr> Random szám genereálás kerekítve: <br>" );
+        document.write(randomSzam1);
+  
+  
+        let randomSzam2=Math.random()*100; //0 és 100 közötti random valós szám!
+        document.write("<hr> Random szám genereálás 0-100 között: <br>" );
+        document.write(randomSzam2);
+
+        let randomSzam3=Math.round(Math.random()*100); //0 és 100 közötti random egész szám!
+        document.write("<hr> Random szám genereálás egész 0-100 között: <br>" );
+        document.write(randomSzam3);
+        
+        let randomSzam4=(Math.round(Math.random()*20))-10; //-10 és (20-10==>10 közötti érték)
+        document.write("<hr> Random szám genereálás-10 és 20 között: <br>" );
+        document.write(randomSzam4);
+        
+        let randomSzam5=Math.round(Math.random()*100)+50; //50 és (100+50=>150 közötti érték)
+        document.write("<hr> Random szám genereálás 50 és 100 között: <br>" );
+        document.write(randomSzam5);
+        </script>
+</body>
+</html>

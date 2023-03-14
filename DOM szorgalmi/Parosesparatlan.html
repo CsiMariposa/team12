@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Páros és páratlan</title>
+</head>
+<body>
+   <p> Kérj be egy számot és írsd ki, hogy páros vagy páratlan-e a szám. 
+    Kérlek add meg a számot:
+   </p>
+   <input type="number" id="szam" value="1" min="1" max="100">
+   <input type="button" value="Számol" onclick="ParosParatlanSzam()"/>
+   <p id="vizsgaltSzam"></p>
+
+    <script>
+       
+//Feladat: Páros/Páratlan!
+//Feladat leírása: Kérj be egy számot, majd írasd ki, páros-e vagy páratlan-e.
+function ParosParatlanSzam(){
+let vizsgaltSzam=document.getElementById("szam").value;
+if(vizsgaltSzam%2==0){
+	document.write(`A ${vizsgaltSzam} páros`);
+}
+else{
+	document.write(`A ${vizsgaltSzam} páratlan`);
+}
+}
+    </script>
+</body>
+</html>

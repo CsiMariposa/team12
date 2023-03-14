@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dom.css">
+   <style> 
+
+</style>
+
+</head>
+<body>
+  <div id="tartalom">
+   <img  class="topleft" src="korkeruletterulet.jpg" alt="Kör terület, került" title="Kör terület, kerület">
+
+
+      <!--Kör kerület terület-->
+      <p> <h1>Számoljuk ki a kör kerületét és területet</h1></p>
+      <p>Add meg a kör méretet</p>
+      <input type="number" id="sugar" value="6" min="1" max="100">
+      <input type="button" value="Számol" onclick="KorKeruleteTerulete()"/>
+      <p id="KeruletEredmeny">A kör kerülete: </p>
+      <p id="TeruletEredmeny">A terülüet területe: </p>
+  
+      
+</div>
+      <script>
+//Érték kiolvasása
+        //.value
+        function KorKeruleteTerulete(){
+            let sugarMeret=document.getElementById("sugar").value;
+            let kerulet=Number(2*sugarMeret)*Math.PI;
+            let terulet=(sugarMeret*sugarMeret)*Math.PI;
+            document.getElementById("KeruletEredmeny").innerHTML="A(z) "+sugarMeret+" méretű négyzet kerülete:"+kerulet;
+            document.getElementById("TeruletEredmeny").innerHTML="A(z) "+sugarMeret+" méretű négyzet területe:"+terulet;
+        }
+    
+      </script>
+
+
+</body>
+</html>

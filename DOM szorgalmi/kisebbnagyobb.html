@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisebb_nagyobb_egyenlő</title>
+</head>
+<body>
+    <p>Kérjünk be adatokat és írassuk ki, hogy melyik szám a nagyobb? </p>
+    <p>Kérlek ad meg az első számot:</p> 
+    <input type="number" id="szam1" value="1" min="1" max="100">
+
+    <p>Kérlek ad meg a második számot:</p> 
+    <input type="number" id="szam2" value="1" min="1" max="100">
+    <input type="button" value="Megadás" onclick="KisebbNagyobb()"/>
+    <p id="KisebbNagyobb"> </p>
+    <script>
+        //Feladat: Melyik a nagyobb? (KisebbNagyobb)
+        //Feladat leírása: Két bekért számról el kell dönteni melyik a nagyobb?
+        //A nagyobb B kisebb, B nagyobb A kisebb, illetve egyenlő
+        function KisebbNagyobb() {
+        let szamEgy=Number(document.getElementById("szam1").value);
+        let szamKetto=Number(document.getElementById("szam2").value);
+        
+        if(szamEgy>szamKetto){
+            document.write(`${szamEgy} nagyobb, ${szamKetto} kisebb`);
+            //document.getElementById("KisebbNagyobbszam").innerHTML="A(z) "+szamEgy+" nagyobb:"+szamKetto+ "kisebb";
+
+        }
+        else if(szamEgy<szamKetto){ /*Vagy úgy írhatjuk a feltételt, hogy: szamKetto>szamEgy*/
+            document.write(`${szamKetto} nagyobb, ${szamEgy} kisebb`);
+            //document.getElementById("KisebbNagyobbszam").innerHTML="A(z) "+szamKetto+" a nagyobb:"+szamEgy+ "a kisebb";
+
+        }
+        else{
+           document.write("A két szám egyenlő!");
+           //document.getElementById("KisebbNagyobbszam").innerHTM="A két szám egyenlő";
+        }
+    }
+    </script>
+</body>
+</html>
