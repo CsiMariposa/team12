@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telekocsi</title>
+    <link rel="stylesheet" href="telekocsi.css">
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="tartalom">
+
+        <div class="menu">
+            <ul>
+                <li><a href="telekocsi.html">Bemutatkozás</a></li>
+                <li> Sofőröknek </li>
+                <li>Utasoknak</li>
+                <li>Bejelentkezés </li>
+                <li> <a href="regisztracio.html">Regisztráció!</a></li>
+            </ul>
+      
+
+        </div>
+        <h2>Regisztráció</h2>
+        <form action="" method="POST">
+            Név:            <input type="text"  > <br>
+            Email cím:      <input type="email" ><br>
+            Jelszó:         <input type="password"  required  value="jelszo1"><br>
+            Jelszó ismét:   <input type="password"  required  value="jelszo2"><br>
+                            <input type="submit" value="Mentés" onclick="jelszoEllenorzes">
+        </form>
+          
+
+    </div>
+
+    <script>
+        function jelszoEllenorzes {
+            let jelszo1=document.getElementById("jelszo1").value;
+            let jelszo1=document.getElementById("jelszo2").value;
+            if (jelszo1!=jelszo2)
+            document.write ("A két jelszó nem megfelelő, kérem ellenőrzizze"); 
+            else {
+                document.write ("A két jelszó megfelelő, a regisztráció sikeres"); 
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
